@@ -1,0 +1,49 @@
+module Time(
+	clk,
+	set,
+	minute_up,
+	hour_up,
+	reset,
+	out_time
+);
+
+
+input clk;
+input set;
+input minute_up;
+input hour_up;
+input reset;
+
+out [31:0] out_time;
+
+reg [31:0] current_time;
+
+always @ (posedge clk or posedge reset)
+begin
+	if (reset)
+	begin
+		current_time = 0;
+	end
+	else if (set && minute_up)
+	begin
+		current_time = current_time + 60000;
+	end
+	
+	else if (set && hour_up)
+	begin
+		current_time = current_time + 3600000;
+	end
+	
+	else if (set)
+	begin
+		// hold
+	end
+	
+	else
+	begin
+		current_time = current_time + 1;
+	end
+
+end
+
+assign out_time = current_time;

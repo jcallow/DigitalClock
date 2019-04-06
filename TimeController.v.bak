@@ -1,0 +1,34 @@
+module TimeController (
+	current_time,
+	alarm_time,
+	time_set,
+	alarm_set,
+	alarm_on,
+	alarm_reset,
+	display_time
+);
+
+input [31:0] current_time;
+input [31:0] alarm_time;
+input time_set;
+input alarm_set;
+input alarm_on;
+input alarm_reset;
+
+output [31:0] display_time;
+
+always @*
+begin
+	if (alarm_set)
+	begin
+		display_time = alarm_time;
+	end
+	else
+	begin
+		display_time = current_time;
+	end
+
+end
+
+
+

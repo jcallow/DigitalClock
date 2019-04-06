@@ -1,0 +1,27 @@
+module HelloWorld(
+							CLOCK_50,
+							LEDR,
+							KEY
+						);
+						
+input CLOCK_50;
+input KEY;
+
+output 	[3:0]		LEDR;
+
+reg		[27:0]	count;
+wire		reset;
+
+assign reset = KEY;
+
+always @ (posedge CLOCK_50 or negedge reset)
+begin
+	if(!reset)
+		count = 0;
+	else 
+		count = count + 1;
+end
+
+assign LEDR = count[27:24];
+
+endmodule

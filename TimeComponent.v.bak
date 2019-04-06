@@ -1,0 +1,122 @@
+`timescale 1ns/100ps
+
+module TimeComponent (
+	reset,
+	clk,
+	tick,
+	set,
+	increment,
+	out_tick,
+	output_value
+);
+
+parameter roll_over = 60;
+
+input reset;
+input clk;
+input tick;
+input set;
+input increment;
+
+output reg out_tick;
+output [31:0] output_value;
+
+reg [31:0] value;
+
+always @(posedge reset or negedge clk)
+begin
+	if (reset)
+	begin
+		value <= 0;
+	end
+	else if (!set && tick)
+	begin
+		if (value < roll_over - 1)
+		begin
+			value <= value + 1;
+		end
+		else if (value >= roll_over - 1)
+		begin
+			value <= 0;
+		end
+	end
+	else if (set && increment)
+	begin
+		value <= (value+1) % roll_over;
+	end
+end
+
+always @(posedge clk)
+begin
+	begin
+		if (!set && value >= roll_over - 1)
+			out_tick <= 1;
+		else
+			out_tick <= 0;
+	end
+end
+
+assign output_value = value;
+
+endmodule
+
+
+module TimeComponent_TB();
+
+reg reset;
+reg clk;
+reg tick;
+reg set;
+reg increment;
+
+wire out_tick;
+wire [31:0] output_value;
+
+
+always
+	#10 clk = ~clk;
+	
+TimeComponent #(.roll_over(30)) time_component (
+	.reset(reset),
+	.clk(clk),
+	.tick(tick),
+	.set(set),
+	.increment(increment),
+	.out_tick(out_tick),
+	.output_value(output_value)
+);
+
+
+	
+initial begin
+	$display($time, " << Starting the Simulation >>");
+	reset = 1'b0;
+	clk = 1'b0;
+	tick = 1'b0;
+	set = 1'b0;
+	increment = 1'b0;
+	
+	#10 reset = 1'b1;
+	
+	//assert (output_value == 8'h00000000);
+	$display ("OK. output is reset");
+	
+	#10 reset = 1'b0;
+	
+	#10 tick = 1'b1;
+	
+	@ (negedge clk);
+	
+	if (output_value != 8'h00000001)
+	begin
+		$display ("output value didn't increment");
+		$finish;
+	end
+	//assert (output_value == 8'h00000001);
+	$display ("OK. output has incremented to 1");
+	$finish;
+end
+
+endmodule
+
+

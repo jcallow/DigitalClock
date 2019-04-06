@@ -1,0 +1,262 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/FPGA/HelloWorld/simulation/modelsim
+vClock
+Z1 !s110 1552092746
+!i10b 1
+!s100 L`F`cl48APn7;H>]jhlZF2
+Ik[hCYS0NBHaLD1`Qf0DPC1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1552084007
+Z4 8C:/Projects/FPGA/HelloWorld/Clock.v
+Z5 FC:/Projects/FPGA/HelloWorld/Clock.v
+L0 1
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1552092746.000000
+Z8 !s107 C:/Projects/FPGA/HelloWorld/Clock.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/Clock.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/Projects/FPGA/HelloWorld
+Z12 tCvgOpt 0
+n@clock
+vclock_testbench
+R1
+!i10b 1
+!s100 OkdP^mLN@K]e8?:jQVP7U2
+I3m<F;d[zBLW1_g_M5k3UA1
+R2
+R0
+R3
+R4
+R5
+L0 52
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vControlInterface
+R1
+!i10b 1
+!s100 9RKGk>Qldf:4bMh3=99Dl0
+I1VW^>Me7Ea@ckF`Me90V:3
+R2
+R0
+w1552079726
+8C:/Projects/FPGA/HelloWorld/ControlInterface.v
+FC:/Projects/FPGA/HelloWorld/ControlInterface.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/ControlInterface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/ControlInterface.v|
+!i113 1
+R10
+R11
+R12
+n@control@interface
+vHelloWorld
+R1
+!i10b 1
+!s100 6NL1lZ_?Oi;E7:QAkCk5B3
+IWd_7`3MWnBDhVb>G52E=e0
+R2
+R0
+w1551836690
+8C:/Projects/FPGA/HelloWorld/HelloWorld.v
+FC:/Projects/FPGA/HelloWorld/HelloWorld.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/HelloWorld.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/HelloWorld.v|
+!i113 1
+R10
+R11
+R12
+n@hello@world
+vLedDisplayInterface
+R1
+!i10b 1
+!s100 Y73czId?R1L4OTid9U:2F0
+IYE;K_<d7i^nCcXi?13]z[3
+R2
+R0
+w1551835801
+8C:/Projects/FPGA/HelloWorld/LedDisplayInterface.v
+FC:/Projects/FPGA/HelloWorld/LedDisplayInterface.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/LedDisplayInterface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/LedDisplayInterface.v|
+!i113 1
+R10
+R11
+R12
+n@led@display@interface
+vSevenSegmentDisplay
+R1
+!i10b 1
+!s100 cc287ZO[G8PRinb6CEL@13
+IA797<Um2HzaA^:iZCk@1`0
+R2
+R0
+w1552079827
+8C:/Projects/FPGA/HelloWorld/SevenSegmentDisplay.v
+FC:/Projects/FPGA/HelloWorld/SevenSegmentDisplay.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/SevenSegmentDisplay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/SevenSegmentDisplay.v|
+!i113 1
+R10
+R11
+R12
+n@seven@segment@display
+vSevenSegmentDisplayInterface
+R1
+!i10b 1
+!s100 j9gYWHbN:;MRlmakkYOQb3
+IKgldaGf8zHi^N:5`h2N^13
+R2
+R0
+w1551822186
+8C:/Projects/FPGA/HelloWorld/SevenSegmentDisplayInterface.v
+FC:/Projects/FPGA/HelloWorld/SevenSegmentDisplayInterface.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/SevenSegmentDisplayInterface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/SevenSegmentDisplayInterface.v|
+!i113 1
+R10
+R11
+R12
+n@seven@segment@display@interface
+vTime
+R1
+!i10b 1
+!s100 o3G6mkg09BE;IlAAIi@W72
+IYDZ@=E]9Zbk>gD1cX3<^L3
+R2
+R0
+w1551835570
+8C:/Projects/FPGA/HelloWorld/Time.v
+FC:/Projects/FPGA/HelloWorld/Time.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/Time.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/Time.v|
+!i113 1
+R10
+R11
+R12
+n@time
+vTimeComponent
+Z13 !s110 1552092978
+!i10b 1
+!s100 nkR=ZQ2k6Y6HbNU=E:_]`3
+I7KD2FHQ_[^j7=CL:@P^NQ3
+R2
+R0
+Z14 w1552092973
+Z15 8C:/Projects/FPGA/HelloWorld/TimeComponent.v
+Z16 FC:/Projects/FPGA/HelloWorld/TimeComponent.v
+L0 3
+R6
+r1
+!s85 0
+31
+Z17 !s108 1552092978.000000
+Z18 !s107 C:/Projects/FPGA/HelloWorld/TimeComponent.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/TimeComponent.v|
+!i113 1
+R10
+R11
+R12
+n@time@component
+vTimeComponent_TB
+R13
+!i10b 1
+!s100 >`Cc_YSk=]0g8b9RLZ]MQ1
+IHBdd7<SAh:n7moJAOJAiA2
+R2
+R0
+R14
+R15
+R16
+L0 64
+R6
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R10
+R11
+R12
+n@time@component_@t@b
+vTimeController
+R1
+!i10b 1
+!s100 0SMBRVW4SKUA]j8Lh5N@G0
+IJdcBB3GV>_2n`=9al@jMQ2
+R2
+R0
+w1552079870
+8C:/Projects/FPGA/HelloWorld/TimeController.v
+FC:/Projects/FPGA/HelloWorld/TimeController.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/FPGA/HelloWorld/TimeController.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/FPGA/HelloWorld|C:/Projects/FPGA/HelloWorld/TimeController.v|
+!i113 1
+R10
+R11
+R12
+n@time@controller

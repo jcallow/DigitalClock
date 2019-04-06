@@ -1,0 +1,8 @@
+module Clock(
+		input_clock,
+		debug,
+		output_speed,
+		debug_mult,
+		output_clock
+
+)
